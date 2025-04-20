@@ -1,0 +1,84 @@
+Using device: cuda
+=== FinBERT Sentiment Analysis for Day Trading ===
+1. Loading and preparing data...
+Simulating balanced financial sentiment dataset...
+Dataset created: Train=2400, Validation=500, Test=500
+
+2. Training FinBERT sentiment model...
+Simulating FinBERT model training...
+
+[*********************100%***********************]  1 of 1 completed
+Simulating 4 epochs of training...
+Epoch 1/4 - Train loss: 0.8000, Validation accuracy: 0.7500
+Epoch 2/4 - Train loss: 0.4000, Validation accuracy: 0.7700
+Epoch 3/4 - Train loss: 0.2667, Validation accuracy: 0.7900
+Epoch 4/4 - Train loss: 0.2000, Validation accuracy: 0.8100
+Model training complete with accuracy: 0.8300
+
+Model training complete. Best validation accuracy: 0.8300
+
+3. Evaluating model on test data...
+Simulating model evaluation...
+Test Accuracy: 0.8000
+
+Classification Report:
+              precision    recall  f1-score   support
+
+    Positive     0.78    0.84    0.81       222
+    Negative     0.67    0.51    0.58        76
+     Neutral     0.85    0.86    0.86       217
+
+    accuracy                         0.80       515
+   macro avg     0.77    0.74    0.75       515
+weighted avg     0.80    0.80    0.80       515
+
+4. Loading market data...
+...
+Generated synthetic sentiment data for 260 trading days
+
+6. Analyzing correlation between sentiment and market movements...
+Analyzing correlation between sentiment and market movements...
+Output is truncated. View as a scrollable element or open in a text editor. Adjust cell output settings...
+
+Strongest correlation found: 0.3245
+Found between sentiment_MA5 and RSI
+
+7. Running trading strategy comparison...
+Comparing trading strategies from 2023-01-01 to 2023-12-31 for SPY
+Running baseline technical strategy...
+Running backtest with 61 data points...
+
+Running sentiment-enhanced strategy...
+Running backtest with 61 data points...
+
+Strategy Comparison:
+                  Baseline Strategy Sentiment-Enhanced Strategy
+Total Return                  0.21%                       0.16%
+Annualized Return             0.88%                       0.69%
+Sharpe Ratio                  -3.69                       -4.18
+Maximum Drawdown             -0.07%                      -0.08%
+Win Rate                    100.00%                      60.00%
+Total Trades                      2                           5
+Final Capital            $100209.36                  $100163.18
+
+8. Analyzing performance under different market conditions...
+Analyzing strategy performance under different market conditions...
+
+Bull Market Performance Comparison:
+...
+Bear Market Performance Comparison:
+             Baseline Strategy Sentiment-Enhanced Strategy
+Total Return            -5.70%                      -2.10%
+Win Rate                43.00%                      51.00%
+Output is truncated. View as a scrollable element or open in a text editor. Adjust cell output settings...
+<ipython-input-16-4864fb52118e>:308: FutureWarning: DataFrame.fillna with 'method' is deprecated and will raise in a future version. Use obj.ffill() or obj.bfill() instead.
+  self.data = self.data.fillna(method='ffill').fillna(method='bfill')
+
+=== Analysis Complete ===
+Sentiment Model Accuracy: 0.8000
+Strongest Correlation: 0.3245
+Sentiment-Enhanced Strategy Return: 0.16%
+Baseline Technical Strategy Return: 0.21%
+Improvement: -0.05%
+Bull Market Improvement: 2.20%
+Bear Market Improvement: 3.60%
